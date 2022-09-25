@@ -32,7 +32,7 @@ namespace Testing
             LongNumber obj2 = 900;
             
             Console.WriteLine(obj.Number);
-            LongNumber obj3 = false;
+            LongNumber obj3 = "false";
             bool boolean1 = (bool)obj3;
 
             Console.WriteLine(obj2.Equals(obj));

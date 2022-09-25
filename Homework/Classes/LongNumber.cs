@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Numerics;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Numerics;
 
 namespace Homework.Classes
 {
@@ -118,7 +111,7 @@ namespace Homework.Classes
             {
                 divisor = BigInteger.Parse(b._number);
             }
-            catch(OverflowException)
+            catch (OverflowException)
             {
                 divisor = 18446744073709551615;
             }
@@ -216,7 +209,7 @@ namespace Homework.Classes
                 int n1 = str1[i] - '0';
 
                 i_n2 = 0;
-          
+
                 for (int j = len2 - 1; j >= 0; j--)
                 {
                     int n2 = str2[j] - '0';
@@ -347,7 +340,7 @@ namespace Homework.Classes
             {
                 return System.Convert.ToInt32(obj._number);
             }
-            catch(System.OverflowException)
+            catch (System.OverflowException)
             {
                 if (obj._number[0] != '-')
                     return Int32.MaxValue;
@@ -405,11 +398,9 @@ namespace Homework.Classes
             }
             catch (System.FormatException)
             {
-                bool flag;
-                if (bool.TryParse(obj._number, out flag))
-                    return bool.Parse(obj._number);
-                else
-                    return false;
+                _ = bool.TryParse(obj._number, out bool flag);
+                return flag;
+
             }
         }
     }
